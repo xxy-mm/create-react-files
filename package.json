@@ -1,0 +1,108 @@
+{
+  "name": "create-react-files",
+  "displayName": "Create React Files",
+  "description": "Auto generate react files",
+  "publisher": "xxy-mm",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.97.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "create-react-files.createReactComponent",
+        "title": "Create React Component"
+      }
+    ],
+    "menus": {
+      "explorer/context": [
+        {
+          "command": "create-react-files.createReactComponent",
+          "group": "navigation",
+          "when": "explorerResourceIsFolder"
+        }
+      ]
+    },
+    "configuration": {
+      "title": "Create React Files",
+      "properties": {
+        "create-react-files.importReact": {
+          "type": "boolean",
+          "default": true,
+          "description": "Whether to import React"
+        },
+        "create-react-files.createTestFile": {
+          "type": "boolean",
+          "default": true,
+          "description": "Whether to create the test file"
+        },
+        "create-react-files.createCssFile": {
+          "type": "boolean",
+          "default": true,
+          "description": "Whether to create the css file"
+        },
+        "create-react-files.createStorybookFile": {
+          "type": "boolean",
+          "default": true,
+          "description": "Whether to create the storybook file"
+        },
+        "create-react-files.cssFileFormat": {
+          "type": "string",
+          "default": "css",
+          "enum": [
+            "scss",
+            "css",
+            "module.scss",
+            "module.css"
+          ],
+          "description": "Specifies what type of css file will be used."
+        },
+        "create-react-files.testFileFormat": {
+          "type": "string",
+          "default": "vitest",
+          "enum": [
+            "vitest",
+            "jest"
+          ],
+          "description": "Specifies what type of test file will be used."
+        },
+        "create-react-files.singleQuote": {
+          "type": "boolean",
+          "default": true,
+          "description": "Whether to use single quotes"
+        },
+        "create-react-files.semi": {
+          "type": "boolean",
+          "default": true,
+          "description": "Whether to use semicolons"
+        }
+      }
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "pnpm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "pnpm run compile && pnpm run lint",
+    "lint": "eslint src",
+    "test": "vscode-test",
+    "package": "pnpm vsce package --no-dependencies",
+    "publish": "pnpm vsce publish --no-dependencies"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.97.0",
+    "@types/mocha": "^10.0.10",
+    "@types/node": "20.x",
+    "@typescript-eslint/eslint-plugin": "^8.22.0",
+    "@typescript-eslint/parser": "^8.22.0",
+    "eslint": "^9.19.0",
+    "typescript": "^5.7.3",
+    "@vscode/test-cli": "^0.0.10",
+    "@vscode/test-electron": "^2.4.1"
+  }
+}

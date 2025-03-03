@@ -3,6 +3,10 @@
   "displayName": "Create React Files",
   "description": "Auto generate react files",
   "publisher": "xxy-mm",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/xxy-mm/create-react-files.git"
+  },
   "version": "0.0.1",
   "engines": {
     "vscode": "^1.97.0"

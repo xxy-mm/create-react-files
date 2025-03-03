@@ -2,9 +2,10 @@
 
 ## Features
 
-Create react component files by just one click.
+Right click on a folder in the explorer and click `Create React Component` to scaffold out a new React component with all the files you need.
 
-\!\[feature X\]\(images/feature-x.png\)
+![Add react component from explore](images/Frame1.png)
+![Component files added](images/Frame2.png)
 
 ## Requirements
 

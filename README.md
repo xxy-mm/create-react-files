@@ -35,7 +35,7 @@ This extension contributes the following settings:
 
 `create-react-files.testFileFormat`: Specifies what type of test file will be used
 
-`create-react-files.singleQuote`: Whether to use single quotes
+`create-react-files.singleQuote`: Whether to use single quote
 
 `create-react-files.semi`: Whether to use semicolon
 

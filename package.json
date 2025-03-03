@@ -3,6 +3,7 @@
   "displayName": "Create React Files",
   "description": "Auto generate react files",
   "publisher": "xxy-mm",
+  "icon": "images/icon.png",
   "repository": {
     "type": "git",
     "url": "https://github.com/xxy-mm/create-react-files.git"
@@ -12,7 +13,7 @@
     "vscode": "^1.97.0"
   },
   "categories": [
-    "Other"
+    "Snippets"
   ],
   "activationEvents": [],
   "main": "./out/extension.js",

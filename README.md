@@ -6,6 +6,7 @@ Right click on a folder in the explorer and click `Create React Component` to sc
 
 ![Add react component from explore](https://github.com/xxy-mm/create-react-files/blob/main/Frame%201.png)
 ![Component files added](https://github.com/xxy-mm/create-react-files/blob/main/Frame%202.png)
+![Settings](https://github.com/xxy-mm/create-react-files/blob/main/Frame%203.png)
 
 ## Requirements
 

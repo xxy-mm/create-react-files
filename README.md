@@ -4,8 +4,8 @@
 
 Right click on a folder in the explorer and click `Create React Component` to scaffold out a new React component with all the files you need.
 
-![Add react component from explore](images/Frame1.png)
-![Component files added](images/Frame2.png)
+![Add react component from explore](https://github.com/xxy-mm/create-react-files/blob/main/Frame%201.png)
+![Component files added](https://raw.githubusercontent.com/xxy-mm/repository/main/images/Frame%202.png)
 
 ## Requirements
 

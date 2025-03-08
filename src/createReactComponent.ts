@@ -3,7 +3,7 @@ import * as fs from "fs";
 import * as path from "path";
 import { createComponent } from "./templates/componentFileTemplate";
 import { createTest } from "./templates/testFileTemplate";
-import { createStorybook } from "./templates/storybookFileTemplate";
+import { createStoryBook } from "./templates/storybookFileTemplate";
 import { createIndex } from "./templates/indexFileTemplate";
 import { createCssFile } from "./templates/cssFileTemplate";
 import { adjustContent } from "./adjustContent";
@@ -84,7 +84,7 @@ export async function createReactComponent(uri: vscode.Uri) {
   if (shouldGenerateStorybook) {
     fs.writeFileSync(
       path.join(componentDir, `${componentName}.stories.tsx`),
-      adjustContent(createStorybook(componentName))
+      adjustContent(createStoryBook(componentName))
     );
   }
 

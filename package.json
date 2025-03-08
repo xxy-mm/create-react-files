@@ -8,7 +8,7 @@
     "type": "git",
     "url": "https://github.com/xxy-mm/create-react-files.git"
   },
-  "version": "0.0.2",
+  "version": "0.1.2",
   "engines": {
     "vscode": "^1.97.0"
   },
@@ -66,6 +66,15 @@
             "module.css"
           ],
           "description": "Specifies what type of css file will be used."
+        },
+        "create-react-files.storybookFramework": {
+          "type": "string",
+          "default": "storybook",
+          "enum": [
+            "storybook",
+            "ladle"
+          ],
+          "description": "Specifies what type of storybook framework will be used."
         },
         "create-react-files.testFileFormat": {
           "type": "string",

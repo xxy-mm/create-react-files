@@ -1,21 +1,15 @@
-import * as vscode from "vscode";
+import { getCssConfig, getReactConfig } from "../configUtils";
 export function createComponent(componentName: string): string {
-  const config = vscode.workspace.getConfiguration("create-react-files");
-  const shouldImportReact = config.get<boolean>("importReact", true);
-  const shouldGenerateCss = config.get<boolean>("createCssFile", true);
-  const cssFiletype = config.get<string>("cssFileFormat", "css");
-
-  const isCssModule = cssFiletype.startsWith("module");
-  let cssImportStat = "";
-  if (isCssModule) {
-    cssImportStat = `import styles from "./${componentName}.${cssFiletype}";`;
-  } else {
-    cssImportStat = `import "./${componentName}.${cssFiletype}";`;
-  }
+  const { shouldImportReact, content: importReactContent } = getReactConfig();
+  const {
+    shouldGenerateCss,
+    content: cssContent,
+    isCssModule,
+  } = getCssConfig(componentName);
   const shouldAddClassName = shouldGenerateCss && isCssModule;
   return `
-${shouldImportReact ? `import React from "react";` : ""}
-${shouldGenerateCss ? cssImportStat : ""}
+${shouldImportReact ? importReactContent : ""}
+${shouldGenerateCss ? cssContent : ""}
 
 type ${componentName}Props = {
     
